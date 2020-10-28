@@ -1,4 +1,4 @@
-# McNeilly Center Contact Portal
+# Tech for America Contact Portal
 
 This is the code repository for the McNeilly Center's 2018 Hack for the Community project. As per the [requirements document](docs/requirements.pdf), this is a "web-based application to collect contact information from parents and staff and communicate important messages via text or email."
 
