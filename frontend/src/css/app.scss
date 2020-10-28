@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@import 'variables.scss';
+
+// Global
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $textGrey;
+  min-width: 320px;
+  background: $lightBackground;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+  color: white;
+}
+
+.logobar {
+  background-color: $navBlue;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logobar-title {
+  margin-left: 50px;
+}
+
+.logo {
+  margin-right: 50px;
+}
+
+form.login {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  padding-top: 3rem;
+}
+
+.modal-content {
+  color: $navBlue;
+}
+
+.modal-content h1,
+.modal-content h2,
+.modal-content h3,
+.modal-content h4,
+.modal-content h5,
+.modal-content h6 {
+  color: $navBlue;
+}
+
+// Apologies that there is both a app wrapper and an app container.
+.appWrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.appContainer {
+  background: $lightBackground;
+  color: $navBlue;
+  padding-bottom: 50px;
+}
+
+.appContainer h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $navBlue;
+}
+
+// Message
+.message-prompt {
+  color: black;
+  font-size: 28px;
+}
+
+.message-textarea {
+  height: 200px;
+  padding: 2rem;
+  font-size: 21px;
+}
+
+// Classroom
+.classroomDetail-locationInfo p {
+  color: $navBlue;
+}
+
+// Admin
+.loadingText {
+  color: $navBlue;
+}
+
+.lightLoadingText {
+  color: white;
+}
+
+.adminContainer {
+  background: $lightBackground;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 3rem;
+}
+
+.AdminLogin {
+  height: 100%;
+  overflow: auto;
+  background-color: $navBlue;
+  display: flex;
+  flex-direction: column;
+}
+
+.AdminLogin-logo {
+  height: 33%;
+  max-height: 300px;
+  min-height: 100px;
+  text-align: center;
+  padding: 10px;
+}
+
+.AdminLogin-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.AdminLogin-form {
+  flex: 1;
+  flex-basis: 65%;
+  background-color: #eef2ed;
+  color: #1b2a38;
+  width: 100%;
+}
+
+.AdminLogin-form h1 {
+  color: #1b2a38;
+}
+
+// Families
+.addFamilyForm-dropdown-item {
+  cursor: pointer;
+}
+
+.addFamilyForm-cancel {
+  display: inline;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.families-detail-notes {
+  margin-top: 20px;
+}
+
+// Footer
+.footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $lightBackground;
+}
+
+.footer a {
+  color: $purple;
+}
+
+// Utilities
+.u-margin-bottom-2rem {
+  margin-bottom: 2rem;
+}
+
+.u-margin-left-20 {
+  margin-left: 20px;
+}
+
+.rowPaddingTop {
+  padding-top: 30px;
+}

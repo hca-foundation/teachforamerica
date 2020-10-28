@@ -1,0 +1,124 @@
+@import 'variables.scss';
+
+.kiosk {
+  height: 100%;
+  width: 100%;
+  background-color: $navBlue;
+}
+
+.kioskContainer {
+  overflow: auto;
+  height: 100%;
+  padding: 30px;
+}
+
+// Update
+
+.updateContainer {
+}
+
+.update-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: solid 1px $borderGrey;
+}
+
+.update-header h1 {
+  color: $navBlue;
+}
+
+.update-header-time {
+  padding: 0 0 0 20px;
+  margin: 0;
+  color: $navBlue;
+}
+
+.update-addContactButton {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.update-contact {
+  margin: 0 0 20px;
+}
+
+.update-contact:last-of-type {
+  margin: 0;
+}
+
+.update-contact p {
+  margin: 0;
+}
+
+// Contact
+
+.contact {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  margin-bottom: 10px;
+}
+
+.contact-label {
+  color: $navBlue;
+  margin-bottom: 30px;
+}
+
+.contact-newContact {
+  margin: 30px 0 0;
+}
+
+.contact-newContact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-newContact-field {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.contact-newContact-cancelButton {
+  margin-left: 20px;
+}
+
+// Thanks
+
+.thankYou {
+  margin: 0 auto;
+  width: 320px;
+  padding-top: 3rem;
+}
+
+.thankYou h1 {
+  margin-bottom: 20px;
+}
+
+.thankYou p {
+  margin-bottom: 20px;
+}
+
+// Media Queries
+
+@media (max-width: 768px) {
+  form.login,
+  .thankYou {
+    width: 80%;
+  }
+
+  .kioskContainer {
+    padding: 0;
+  }
+
+  .updateContainer {
+    border-radius: 0;
+    height: 100%;
+    overflow: auto;
+  }
+}

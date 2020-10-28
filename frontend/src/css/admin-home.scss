@@ -1,0 +1,47 @@
+@import 'variables.scss';
+
+.adminHome {
+  margin-top: 1rem;
+}
+
+.adminHome-message {
+  margin: 0 0 1rem;
+}
+
+.adminHome-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 160px;
+  border-radius: 5px;
+  background-color: $purple;
+  border: $purple;
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.adminHome-button:hover {
+  background-color: darken($purple, 10);
+  border: darken($purple, 10);
+  text-decoration: none;
+  color: white;
+}
+
+.adminHome-button--green {
+  background-color: $green;
+}
+
+.adminHome-button--green:hover {
+  background-color: darken($green, 10);
+  border: darken($green, 10);
+  text-decoration: none;
+  color: white;
+}
+
+.adminHome-logout {
+  cursor: pointer;
+}

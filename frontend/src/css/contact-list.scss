@@ -1,0 +1,68 @@
+@import 'variables.scss';
+
+.contactListWrapper {
+  background: white;
+  color: $purple;
+  padding: 1rem;
+  border: 1px solid $borderGrey;
+  border-radius: 5px;
+}
+
+.contactListWrapper-heading {
+  color: $purple;
+  margin: 0 0 1rem;
+}
+
+.contactListWrapper-subHeading {
+  margin: 2rem 0 1rem;
+}
+
+.contactList-form {
+  margin-top: 1rem;
+}
+
+.contactList-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contactList-textWrapper {
+  flex: 1 2 200px;
+  max-width: 350px;
+}
+
+.contactList-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactList-controls {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  color: $purple;
+}
+
+.contactList-controls-edit {
+  cursor: pointer;
+}
+
+.contactList-controls-delete {
+  cursor: pointer;
+}
+
+.contactList-text-label {
+  font-weight: bold;
+}
+
+.contactList-text-value {
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.contactList-addContact {
+  margin: 1rem 0 0;
+}

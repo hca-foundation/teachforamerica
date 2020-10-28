@@ -1,0 +1,20 @@
+{
+  "development": {
+    "use_env_variable": "CONTACT_PORTAL_DATABASE_URL",
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": true
+      }
+    }
+  },
+  "production": {
+    "use_env_variable": "CONTACT_PORTAL_DATABASE_URL",
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": true
+      }
+    }
+  }
+}

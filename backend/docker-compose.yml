@@ -1,0 +1,40 @@
+version: "3.4"
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: .docker/dev/Dockerfile
+    image: mcneilly/dev
+    depends_on:
+      - db
+    env_file:
+      - .env
+      - .env.local
+    ports:
+      - 3001:3000
+    volumes:
+      - .:/app
+  prod:
+    build:
+      context: .
+      dockerfile: .docker/prod/Dockerfile
+    image: mcneilly/prod
+    depends_on:
+      - db
+    env_file:
+      - .env
+      - .env.local
+    ports:
+      - 8080:80
+    volumes:
+      - .:/app
+  db:
+    image: postgres:10.3
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_DB=contact_portal
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/var/lib/postgresql/data

@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+COMPOSE="docker-compose"
+
+if [ $# -gt 0 ];then
+
+    if [ "$1" == "run" ]; then
+        shift 1
+        $COMPOSE run --rm dev "$@"
+
+    elif [ "$1" == "restart" ]; then
+        $COMPOSE stop dev
+        $COMPOSE up -d dev
+
+    elif [ "$1" == "npm" ]; then
+        shift 1
+        $COMPOSE run --rm dev npm "$@"
+
+      elif [ "$1" == "sequelize" ]; then
+          shift 1
+          $COMPOSE run --rm dev ./node_modules/.bin/sequelize "$@"
+
+    elif [ "$1" == "setup" ]; then
+        $COMPOSE pull
+        $COMPOSE build
+        $COMPOSE up -d db # start database container in the background
+        $COMPOSE run --rm dev npm install
+        $COMPOSE exec db psql -U postgres -d contact_portal -c "CREATE EXTENSION citext" # install citext extension
+        $COMPOSE run --rm dev ./node_modules/.bin/sequelize db:migrate # run migrations
+        $COMPOSE run --rm dev ./node_modules/.bin/sequelize db:seed:all # run seeds
+        $COMPOSE stop db # stop database container started earlier
+
+    elif [ "$1" == "test" ]; then
+        $COMPOSE run --rm dev npm test
+
+    else
+        $COMPOSE "$@"
+    fi
+
+else
+    $COMPOSE ps
+fi

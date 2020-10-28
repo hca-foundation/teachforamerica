@@ -1,0 +1,6 @@
+*.local
+
+.idea/workspace.xml
+db/pgdata
+.idea/dataSources
+datasources.local.xml
