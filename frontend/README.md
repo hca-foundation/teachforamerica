@@ -1,4 +1,4 @@
-# McNeilly Center Contact Portal - Frontend
+# Teach for America Contact Portal - Frontend
 
 ## How to Run
 
